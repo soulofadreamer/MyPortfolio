@@ -31,7 +31,7 @@ struct AllSkillsView: View {
                                         .frame(width: geo.size.width/2)
                                     
                                 }
-                                
+                                .frame(height: geo.size.height)
                                 
                             }
                             
@@ -42,7 +42,7 @@ struct AllSkillsView: View {
                         }
                     }
                     .scrollIndicators(.hidden)
-                    .frame(height: geo.size.height)
+                    
                     
                 }
             

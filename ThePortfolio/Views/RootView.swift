@@ -26,7 +26,7 @@ struct RootView: View {
         
         ZStack{
             
-            BackgroundView()
+           BackgroundView()
             
             GeometryReader { geo in
                 
@@ -37,7 +37,7 @@ struct RootView: View {
                     ScrollView {
                         
                         AllSkillsView()
-                        
+
                         Spacer()
                         
                     }
