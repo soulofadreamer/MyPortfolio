@@ -26,26 +26,21 @@ struct RootView: View {
         
         ZStack{
             
-           BackgroundView()
+            BackgroundView()
             
             GeometryReader { geo in
                 
-                
-                VStack(spacing: 10) {
-                    
-                    TitleBarView()
-                    ScrollView {
+                ScrollView {
+                    VStack() {
                         
+                        TitleBarView()
                         AllSkillsView()
-                            
-                        Spacer()
-                        
                         
                         
                     }
+                    .frame(height: geo.size.height)
                     
                 }
-                .frame(height: geo.size.height)
                 
             }
             
