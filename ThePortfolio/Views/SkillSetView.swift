@@ -29,7 +29,9 @@ struct SkillSetView: View {
                             .fill(showExpanded ? Color.blue : Color.clear)
                             .overlay(content: {
                                 RoundedRectangle(cornerRadius: 12)
-                                    .stroke(Color.accentColor )
+                                    .stroke(Color(hue: 0.089, saturation: 0.768, brightness: 0.946))
+                                    .foregroundStyle(Color(hue: 0.512, saturation: 0.945, brightness: 0.74))
+                                
                             })
                             .frame(width: geo.size.width, height: 40)
                         
@@ -45,18 +47,24 @@ struct SkillSetView: View {
                     
                     withAnimation(.easeInOut(duration: 2)) {
                         ZStack(alignment: .leading) {
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(showExpanded ? Color.blue : Color.clear)
-                                .overlay(content: {
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke(Color.accentColor )
-                                })
-                                .frame(width: geo.size.width)
                             
-                            Text(allSkills.skill)
-                                .padding(.horizontal)
-                                .font(.subheadline)
-                                .foregroundStyle(.foreground)
+                            ExpandedSkillView()
+                            
+                            VStack(alignment: .leading, spacing: 10) {
+                                
+                                Text(allSkills.skill)
+                                    .padding(.horizontal)
+                                    .font(.subheadline)
+                                    .foregroundStyle(.foreground)
+                                
+                                Text(allSkills.description)
+                                    .padding(.horizontal)
+                                    .font(.subheadline)
+                                    .foregroundStyle(.foreground)
+                                Spacer(minLength: 12)
+                            }
+                            .padding(.top, 10)
+                            .frame(height: geo.size.height)
                             
                             
                         }
@@ -71,5 +79,6 @@ struct SkillSetView: View {
 }
 
 #Preview {
-    SkillSetView(allSkills: AllSkills(skill: "SwiftUI"))
+    SkillSetView(allSkills: AllSkills(skill: "XCode",
+                                      description: "I possess advanced proficiency in Xcode, Apple's integrated development environment. Leveraging its robust features, I efficiently build, debug, and deploy high-quality iOS applications, ensuring seamless user experiences."))
 }

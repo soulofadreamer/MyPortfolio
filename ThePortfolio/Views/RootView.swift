@@ -37,8 +37,10 @@ struct RootView: View {
                     ScrollView {
                         
                         AllSkillsView()
-
+                            
                         Spacer()
+                        
+                        
                         
                     }
                     
