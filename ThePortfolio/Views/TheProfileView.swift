@@ -20,7 +20,6 @@ struct TheProfileView: View {
                 .font(.title)
                 .bold()
                 
-            
            
             HStack {
                 Text("Mobile Number:")

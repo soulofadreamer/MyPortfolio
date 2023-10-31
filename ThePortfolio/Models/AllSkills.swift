@@ -9,5 +9,5 @@ import Foundation
 struct AllSkills: Identifiable{
     var id = UUID()
     var skill: String
-    
+    var description: String
 }

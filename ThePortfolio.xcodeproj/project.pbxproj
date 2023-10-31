@@ -19,6 +19,7 @@
 		6573CAC22AF172E4000F700C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573CAC12AF172E4000F700C /* BackgroundView.swift */; };
 		65A567D82AEC2F5100CD89DA /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A567D72AEC2F5100CD89DA /* TitleBarView.swift */; };
 		65D19CD82AEED5C4004C6268 /* TheProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D19CD72AEED5C4004C6268 /* TheProfileView.swift */; };
+		65EAD3CA2AF1998A008E7D7C /* ExpandedSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD3C92AF1998A008E7D7C /* ExpandedSkillView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		6573CAC12AF172E4000F700C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		65A567D72AEC2F5100CD89DA /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
 		65D19CD72AEED5C4004C6268 /* TheProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheProfileView.swift; sourceTree = "<group>"; };
+		65EAD3C92AF1998A008E7D7C /* ExpandedSkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedSkillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				65A567D72AEC2F5100CD89DA /* TitleBarView.swift */,
 				6573CAC12AF172E4000F700C /* BackgroundView.swift */,
 				652274C92AED865500BD9D34 /* SkillSetView.swift */,
+				65EAD3C92AF1998A008E7D7C /* ExpandedSkillView.swift */,
 				65D19CD72AEED5C4004C6268 /* TheProfileView.swift */,
 				655E75B52AEE4B0200AF71B9 /* AllSkillsView.swift */,
 			);
@@ -192,6 +195,7 @@
 				65D19CD82AEED5C4004C6268 /* TheProfileView.swift in Sources */,
 				655E75BA2AEE58C300AF71B9 /* UserInformation.swift in Sources */,
 				655E75B62AEE4B0200AF71B9 /* AllSkillsView.swift in Sources */,
+				65EAD3CA2AF1998A008E7D7C /* ExpandedSkillView.swift in Sources */,
 				652274CC2AED87C800BD9D34 /* AllSkills.swift in Sources */,
 				65A567D82AEC2F5100CD89DA /* TitleBarView.swift in Sources */,
 				655901052AEAE57B000D3833 /* ThePortfolioApp.swift in Sources */,
