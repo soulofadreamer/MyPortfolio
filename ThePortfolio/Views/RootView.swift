@@ -30,26 +30,25 @@ struct RootView: View {
             
             GeometryReader { geo in
                 
-                ScrollView {
-                    VStack() {
-                        
-                        TitleBarView()
-                        AllSkillsView()
-                        
-                        
+                
+                VStack(spacing: 10) {
+                    
+                    TitleBarView()
+                    ScrollView {
+                       AllSkillsView()
                     }
-                    .frame(height: geo.size.height)
                     
                 }
+                .frame(height: geo.size.height)
                 
             }
-            
-            
-            
         }
         .padding(.horizontal, 10)
+        
     }
+    
 }
+
 
 #Preview {
     RootView()
