@@ -11,6 +11,7 @@ import SwiftUI
 struct SkillSetView: View {
     @State private var showExpanded = false
     var allSkills: AllSkills
+    var cornerRadius: CGFloat = 12
     var body: some View {
         
         GeometryReader { geo in
@@ -25,10 +26,10 @@ struct SkillSetView: View {
                 if !showExpanded {
                     
                     ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 12)
+                        RoundedRectangle(cornerRadius: cornerRadius)
                             .fill(showExpanded ? Color.blue : Color.clear)
                             .overlay(content: {
-                                RoundedRectangle(cornerRadius: 12)
+                                RoundedRectangle(cornerRadius: cornerRadius)
                                     .stroke(Color(hue: 0.089, saturation: 0.768, brightness: 0.946))
                                     .foregroundStyle(Color(hue: 0.512, saturation: 0.945, brightness: 0.74))
                                 

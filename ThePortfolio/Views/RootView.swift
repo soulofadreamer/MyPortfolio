@@ -35,7 +35,7 @@ struct RootView: View {
                     
                     TitleBarView()
                     ScrollView {
-                       AllSkillsView()
+                        AllSkillsView()
                     }
                     
                 }

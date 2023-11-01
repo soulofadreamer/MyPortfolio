@@ -18,32 +18,32 @@ struct AllSkillsView: View {
             Text("Skills")
                 .font(.title2)
                 .bold()
-              
+            
             GeometryReader { geo in
-                    
-                    ScrollView(.horizontal) {
-                        LazyHGrid(rows: rows, spacing: 10, content: {
-                            
-                            ForEach(allSkills) { item in
-                                withAnimation(.bouncy){
-                                    
-                                    SkillSetView(allSkills: item)
-                                        .frame(width: geo.size.width/2)
-                                    
-                                }
+                
+                ScrollView(.horizontal) {
+                    LazyHGrid(rows: rows, spacing: 10, content: {
+                        
+                        ForEach(allSkills) { item in
+                            withAnimation(.bouncy){
                                 
+                                SkillSetView(allSkills: item)
+                                    .frame(width: geo.size.width/2)
                                 
                             }
                             
-                        })
-                        .onAppear{
                             
-                            allSkills = DataServices().getData()
                         }
+                        
+                    })
+                    .onAppear{
+                        
+                        allSkills = DataServices().getData()
                     }
-                    .scrollIndicators(.hidden)
-                    .frame(height: 300)
                 }
+                .scrollIndicators(.hidden)
+                .frame(height: 300)
+            }
             
             
         }
