@@ -39,7 +39,7 @@ struct RootView: View {
                     }
                     
                 }
-                .frame(height: geo.size.height)
+                .frame(height: .infinity)
                 
             }
         }
