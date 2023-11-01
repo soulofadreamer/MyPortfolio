@@ -26,8 +26,9 @@ struct SkillSetView: View {
                 if !showExpanded {
                     
                     ZStack(alignment: .leading) {
+                        
                         RoundedRectangle(cornerRadius: cornerRadius)
-                            .fill(showExpanded ? Color.blue : Color.clear)
+                            .fill(Color.clear)
                             .overlay(content: {
                                 RoundedRectangle(cornerRadius: cornerRadius)
                                     .stroke(Color(hue: 0.089, saturation: 0.768, brightness: 0.946))
@@ -43,10 +44,11 @@ struct SkillSetView: View {
                         
                         
                     }
-                    //.transition(.opacity.animation(.easeInOut))
+                    
                 } else {
                     
                     withAnimation(.easeInOut(duration: 2)) {
+                       
                         ZStack(alignment: .leading) {
                             
                             ExpandedSkillView()
@@ -62,10 +64,13 @@ struct SkillSetView: View {
                                     .padding(.horizontal)
                                     .font(.subheadline)
                                     .foregroundStyle(.foreground)
+                                    .layoutPriority(1)
+                                
                                 Spacer(minLength: 12)
                             }
+                            
                             .padding(.top, 10)
-                            .frame(height: geo.size.height)
+                            //.frame(height: geo.size.height)
                             
                             
                         }

@@ -13,14 +13,15 @@ struct AllSkillsView: View {
     @State var showSkills: Bool = false
     var body: some View {
         
-        VStack(alignment: .leading) {
-            
-            Text("Skills")
-                .font(.title2)
-                .bold()
-            
-            GeometryReader { geo in
+        GeometryReader { geo in
+           
+            VStack(alignment: .leading) {
                 
+                Text("Skills")
+                    .font(.title2)
+                    .bold()
+                
+                   
                 ScrollView(.horizontal) {
                     LazyHGrid(rows: rows, spacing: 10, content: {
                         
@@ -36,15 +37,16 @@ struct AllSkillsView: View {
                         }
                         
                     })
+                    
                     .onAppear{
                         
-                        allSkills = DataServices().getData()
+                      allSkills = DataServices().getData()
                     }
                 }
                 .scrollIndicators(.hidden)
-                .frame(height: 300)
+                
             }
-            
+            .frame(maxHeight: .infinity)
             
         }
         

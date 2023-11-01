@@ -24,7 +24,7 @@ struct RootView: View {
     
     var body: some View {
         
-        ZStack{
+        ZStack {
             
             BackgroundView()
             
@@ -34,12 +34,10 @@ struct RootView: View {
                 VStack(spacing: 10) {
                     
                     TitleBarView()
-                    ScrollView {
-                        AllSkillsView()
-                    }
-                    
+                   
+                    MiddleView()
                 }
-                .frame(height: .infinity)
+                //.frame(height: .infinity)
                 
             }
         }
