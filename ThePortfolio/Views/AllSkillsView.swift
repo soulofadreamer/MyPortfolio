@@ -46,7 +46,7 @@ struct AllSkillsView: View {
                 .scrollIndicators(.hidden)
                 
             }
-            .frame(maxHeight: .infinity)
+            .frame(height: 300)
             
         }
         

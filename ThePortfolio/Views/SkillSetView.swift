@@ -60,6 +60,7 @@ struct SkillSetView: View {
                                     .font(.subheadline)
                                     .foregroundStyle(.foreground)
                                 
+                                // changed here
                                 Text(allSkills.description)
                                     .padding(.horizontal)
                                     .font(.subheadline)
