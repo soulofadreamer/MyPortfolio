@@ -12,7 +12,7 @@ struct DataServices {
     func getData() -> [AllSkills]{
         
         // get file path
-        if let url = Bundle.main.url(forResource: "AllSkillsData", withExtension: "JSON") {
+        if let url = Bundle.main.url(forResource: "AllSkillsData", withExtension: "json") {
             
             do {
                 

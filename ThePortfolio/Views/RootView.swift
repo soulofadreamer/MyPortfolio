@@ -29,6 +29,7 @@ struct RootView: View {
                 VStack(spacing: 10) {
                     TitleBarView()
                     MiddleView()
+                    
                 }
                 .frame(minHeight:0, maxHeight: .infinity)
         }
