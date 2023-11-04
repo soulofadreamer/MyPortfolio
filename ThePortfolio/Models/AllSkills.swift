@@ -6,8 +6,8 @@
 //
 
 import Foundation
-struct AllSkills: Identifiable{
-    var id = UUID()
+struct AllSkills: Identifiable, Decodable{
+    let id = UUID()
     var skill: String
     var description: String
     

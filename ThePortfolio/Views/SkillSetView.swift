@@ -33,10 +33,10 @@ struct SkillSetView: View {
             .background(
                 RoundedRectangle(cornerRadius: 10).strokeBorder(.orange, lineWidth: 2)
             )
-            
+            .transition(.opacity.animation(.easeInOut(duration: 0.25)))
         } else {
             Button(action: {
-                withAnimation(.easeInOut(duration: 0.25)) {
+                withAnimation(.bouncy(duration: 0.25)) {
                     showExpanded.toggle()
                 }
             }, label: {
@@ -65,7 +65,7 @@ struct SkillSetView: View {
             .controlSize(.large)
             .background(
                 ExpandedSkillView()
-                    .transition(.opacity)
+                    .transition(.opacity.animation(.easeInOut(duration: 1)))
             )
         }
     }
