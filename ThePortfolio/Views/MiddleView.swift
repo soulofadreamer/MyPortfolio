@@ -10,14 +10,12 @@ import SwiftUI
 struct MiddleView: View {
     var body: some View {
         
-        ScrollView {
-            
-            VStack(spacing: 10) {
-                AllSkillsView()
-                
-              //  ExperienceView()
-            }
+        ScrollView{
+            AllSkillsView()
+            AllSkillsView()
+            ExperienceView()
         }
+        .frame(minHeight:0, maxHeight: .infinity)
         
     }
 }

@@ -25,24 +25,14 @@ struct RootView: View {
     var body: some View {
         
         ZStack {
-            
             BackgroundView()
-            
-            GeometryReader { geo in
-                
-                
                 VStack(spacing: 10) {
-                    
                     TitleBarView()
-                   
                     MiddleView()
                 }
-                //.frame(height: .infinity)
-                
-            }
+                .frame(minHeight:0, maxHeight: .infinity)
         }
         .padding(.horizontal, 10)
-        
     }
     
 }

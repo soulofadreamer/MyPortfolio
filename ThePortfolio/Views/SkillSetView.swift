@@ -13,74 +13,60 @@ struct SkillSetView: View {
     var allSkills: AllSkills
     var cornerRadius: CGFloat = 12
     var body: some View {
-        
-        GeometryReader { geo in
-            
+        if !showExpanded {
             Button(action: {
-                withAnimation(.easeInOut(duration: 1)) {
+                withAnimation(.easeInOut(duration: 0.25)) {
                     showExpanded.toggle()
                 }
-                
-                
             }, label: {
-                if !showExpanded {
-                    
-                    ZStack(alignment: .leading) {
-                        
-                        RoundedRectangle(cornerRadius: cornerRadius)
-                            .fill(Color.clear)
-                            .overlay(content: {
-                                RoundedRectangle(cornerRadius: cornerRadius)
-                                    .stroke(Color(hue: 0.089, saturation: 0.768, brightness: 0.946))
-                                    .foregroundStyle(Color(hue: 0.512, saturation: 0.945, brightness: 0.74))
-                                
-                            })
-                            .frame(width: geo.size.width, height: 40)
-                        
-                        Text(allSkills.skill)
-                            .padding(.horizontal)
-                            .font(.subheadline)
-                            .foregroundStyle(.foreground)
-                        
-                        
-                    }
-                    
-                } else {
-                    
-                    withAnimation(.easeInOut(duration: 2)) {
-                       
-                        ZStack(alignment: .leading) {
-                            
-                            ExpandedSkillView()
-                            
-                            VStack(alignment: .leading, spacing: 10) {
-                                
-                                Text(allSkills.skill)
-                                    .padding(.horizontal)
-                                    .font(.subheadline)
-                                    .foregroundStyle(.foreground)
-                                
-                                // changed here
-                                Text(allSkills.description)
-                                    .padding(.horizontal)
-                                    .font(.subheadline)
-                                    .foregroundStyle(.foreground)
-                                    .layoutPriority(1)
-                                
-                                Spacer(minLength: 12)
-                            }
-                            
-                            .padding(.top, 10)
-                            //.frame(height: geo.size.height)
-                            
-                            
-                        }
-                    }
-                }
+                
+                Text(allSkills.skill)
+                    .padding(.horizontal)
+                    .font(.subheadline)
+                    .foregroundStyle(.foreground)
+                
                 
             })
-            .buttonStyle(PressableButtonStyle())
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .controlSize(.large)
+            .background(
+                RoundedRectangle(cornerRadius: 10).strokeBorder(.orange, lineWidth: 2)
+            )
             
+        } else {
+            Button(action: {
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    showExpanded.toggle()
+                }
+            }, label: {
+                ZStack{
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        HStack{
+                            Text(allSkills.skill)
+                                .font(.subheadline)
+                                .foregroundStyle(.black)
+                                .bold()
+                            Spacer()
+                        }
+                        Text(allSkills.description)
+                            .font(.subheadline)
+                            .foregroundStyle(.black)
+                            .layoutPriority(1)
+                    }
+                    .multilineTextAlignment(.leading)
+                }
+                .frame(width: 250)
+            })
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .controlSize(.large)
+            .background(
+                ExpandedSkillView()
+                    .transition(.opacity)
+            )
         }
     }
 }

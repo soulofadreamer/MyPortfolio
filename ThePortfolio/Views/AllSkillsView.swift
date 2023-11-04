@@ -13,43 +13,29 @@ struct AllSkillsView: View {
     @State var showSkills: Bool = false
     var body: some View {
         
-        GeometryReader { geo in
-           
-            VStack(alignment: .leading) {
-                
-                Text("Skills")
-                    .font(.title2)
-                    .bold()
-                
-                   
-                ScrollView(.horizontal) {
-                    LazyHGrid(rows: rows, spacing: 10, content: {
-                        
-                        ForEach(allSkills) { item in
-                            withAnimation(.bouncy){
-                                
-                                SkillSetView(allSkills: item)
-                                    .frame(width: geo.size.width/2)
-                                
-                            }
-                            
-                            
-                        }
-                        
-                    })
-                    
-                    .onAppear{
-                        
-                      allSkills = DataServices().getData()
+        HStack{
+            Text("Skills")
+                .font(.title2)
+                .bold()
+                .padding(.leading, 20)
+            Spacer()
+        }
+        ScrollView(.horizontal) {
+            HStack{
+                ForEach(allSkills) { item in
+                    VStack{
+                        SkillSetView(allSkills: item)
+                        Spacer()
                     }
                 }
-                .scrollIndicators(.hidden)
-                
             }
-            .frame(height: 300)
-            
+            .frame(minHeight:0, maxHeight: .infinity)
+            .onAppear{
+                allSkills = DataServices().getData()
+            }
         }
-        
+        .scrollIndicators(.hidden)
+        .frame(minHeight:0, maxHeight: .infinity)
     }
 }
 

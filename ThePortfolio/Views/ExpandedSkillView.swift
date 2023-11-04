@@ -29,6 +29,7 @@ struct ExpandedSkillView: View {
                     .cornerRadius(12)
             }
         }
+        .frame(minHeight: 0, maxHeight: .infinity)
     }
 }
 
