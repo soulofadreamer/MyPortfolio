@@ -31,7 +31,7 @@ struct SkillSetView: View {
             .padding(.vertical, 12)
             .controlSize(.large)
             .background(
-                RoundedRectangle(cornerRadius: 10).strokeBorder(.orange, lineWidth: 2)
+                Capsule().strokeBorder(.orange, lineWidth: 2)
             )
             .transition(.opacity.animation(.easeInOut(duration: 0.25)))
         } else {
@@ -55,8 +55,10 @@ struct SkillSetView: View {
                             .font(.subheadline)
                             .foregroundStyle(.black)
                             .layoutPriority(1)
+                            
                     }
                     .multilineTextAlignment(.leading)
+                    
                 }
                 .frame(width: 250)
             })
@@ -67,6 +69,7 @@ struct SkillSetView: View {
                 ExpandedSkillView()
                     .transition(.opacity.animation(.easeInOut(duration: 1)))
             )
+            
         }
     }
 }

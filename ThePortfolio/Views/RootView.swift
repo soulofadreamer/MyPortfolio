@@ -30,10 +30,11 @@ struct RootView: View {
                     TitleBarView()
                     MiddleView()
                     
+                    
                 }
                 .frame(minHeight:0, maxHeight: .infinity)
         }
-        .padding(.horizontal, 10)
+        .padding(.horizontal, 12)
     }
     
 }

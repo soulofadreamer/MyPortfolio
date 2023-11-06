@@ -12,10 +12,12 @@ struct MiddleView: View {
         
         ScrollView{
             AllSkillsView()
-            AllSkillsView()
+           
             ExperienceView()
         }
         .frame(minHeight:0, maxHeight: .infinity)
+        .scrollIndicators(.hidden)
+        
         
     }
 }

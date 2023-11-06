@@ -17,6 +17,7 @@
 		6559010C2AEAE57C000D3833 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6559010B2AEAE57C000D3833 /* Preview Assets.xcassets */; };
 		655E75B62AEE4B0200AF71B9 /* AllSkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E75B52AEE4B0200AF71B9 /* AllSkillsView.swift */; };
 		655E75BA2AEE58C300AF71B9 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E75B92AEE58C300AF71B9 /* UserInformation.swift */; };
+		656EF8272AF95DC40024818A /* WorkExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EF8262AF95DC40024818A /* WorkExperience.swift */; };
 		6573CAC22AF172E4000F700C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573CAC12AF172E4000F700C /* BackgroundView.swift */; };
 		6581889F2AF6BFDD001C83B4 /* ExperienceViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6581889E2AF6BFDD001C83B4 /* ExperienceViewCard.swift */; };
 		658188A12AF6C07D001C83B4 /* AllSkillsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 658188A02AF6C07D001C83B4 /* AllSkillsData.json */; };
@@ -39,6 +40,7 @@
 		6559010B2AEAE57C000D3833 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		655E75B52AEE4B0200AF71B9 /* AllSkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSkillsView.swift; sourceTree = "<group>"; };
 		655E75B92AEE58C300AF71B9 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		656EF8262AF95DC40024818A /* WorkExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperience.swift; sourceTree = "<group>"; };
 		6573CAC12AF172E4000F700C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		6581889E2AF6BFDD001C83B4 /* ExperienceViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewCard.swift; sourceTree = "<group>"; };
 		658188A02AF6C07D001C83B4 /* AllSkillsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllSkillsData.json; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				652274CB2AED87C800BD9D34 /* AllSkills.swift */,
 				655E75B92AEE58C300AF71B9 /* UserInformation.swift */,
+				656EF8262AF95DC40024818A /* WorkExperience.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				65D19CD82AEED5C4004C6268 /* TheProfileView.swift in Sources */,
 				655E75BA2AEE58C300AF71B9 /* UserInformation.swift in Sources */,
 				658A60BE2AF28604001BD495 /* ExperienceView.swift in Sources */,
+				656EF8272AF95DC40024818A /* WorkExperience.swift in Sources */,
 				655E75B62AEE4B0200AF71B9 /* AllSkillsView.swift in Sources */,
 				651794A42AF1A98B008EDB31 /* ExpandedSkillView.swift in Sources */,
 				652274CC2AED87C800BD9D34 /* AllSkills.swift in Sources */,
