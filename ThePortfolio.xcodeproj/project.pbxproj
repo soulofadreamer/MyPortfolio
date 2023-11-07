@@ -25,6 +25,7 @@
 		65A567D82AEC2F5100CD89DA /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A567D72AEC2F5100CD89DA /* TitleBarView.swift */; };
 		65CAE4BB2AF6CC2E00D05424 /* AllSkillsData.json in Sources */ = {isa = PBXBuildFile; fileRef = 658188A02AF6C07D001C83B4 /* AllSkillsData.json */; };
 		65CEC9AC2AFABFF500083296 /* DetailedExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CEC9AB2AFABFF500083296 /* DetailedExperienceView.swift */; };
+		65CEC9AE2AFACD7500083296 /* Experience.json in Resources */ = {isa = PBXBuildFile; fileRef = 65CEC9AD2AFACD7500083296 /* Experience.json */; };
 		65D19CD82AEED5C4004C6268 /* TheProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D19CD72AEED5C4004C6268 /* TheProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		658A60BD2AF28604001BD495 /* ExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceView.swift; sourceTree = "<group>"; };
 		65A567D72AEC2F5100CD89DA /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
 		65CEC9AB2AFABFF500083296 /* DetailedExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedExperienceView.swift; sourceTree = "<group>"; };
+		65CEC9AD2AFACD7500083296 /* Experience.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Experience.json; sourceTree = "<group>"; };
 		65D19CD72AEED5C4004C6268 /* TheProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 				655901042AEAE57B000D3833 /* ThePortfolioApp.swift */,
 				6573CAC52AF17341000F700C /* Views */,
 				658188A02AF6C07D001C83B4 /* AllSkillsData.json */,
+				65CEC9AD2AFACD7500083296 /* Experience.json */,
 				6573CAC32AF17302000F700C /* ViewModels */,
 				6573CAC42AF1731C000F700C /* Models */,
 				655901082AEAE57C000D3833 /* Assets.xcassets */,
@@ -195,6 +198,7 @@
 				6559010C2AEAE57C000D3833 /* Preview Assets.xcassets in Resources */,
 				658188A12AF6C07D001C83B4 /* AllSkillsData.json in Resources */,
 				655901092AEAE57C000D3833 /* Assets.xcassets in Resources */,
+				65CEC9AE2AFACD7500083296 /* Experience.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
