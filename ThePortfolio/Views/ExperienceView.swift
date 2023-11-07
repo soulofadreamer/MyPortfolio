@@ -9,29 +9,43 @@ import SwiftUI
 
 struct ExperienceView: View {
     
+    @State var experienceInfo: [WorkExperience] = []
+    var dataServices = DataServices()
+    
     var body: some View {
         
-        VStack {
-            
-            HStack{
-                Text("Work Experience")
-                    .font(.title2)
-                    .bold()
+        NavigationStack {
+            VStack(alignment: .leading) {
+                
+                HStack{
+                    Text("Work Experience")
+                        .font(.title2)
+                        .bold()
+                    Spacer()
+                }
+                
+                LazyVGrid(columns: [GridItem()], content: {
                     
-                Spacer()
+                    ForEach(experienceInfo) { item in
+                        
+                        NavigationLink (destination: DetailedExperienceView(), label: {
+                            
+                            ExperienceViewCard(experienceInfo: [WorkExperience(companyName: item.companyName, workedAs: item.workedAs, description: item.description, summary: item.summary, startDate: item.startDate, endDate: item.endDate, companyLogo: item.companyLogo)])
+                            
+                        })
+                        
+                        
+                    }
+                })
+                .onAppear(perform: {
+                    experienceInfo = dataServices.getWorkData()
+                })
+                
             }
-            ExperienceViewCard(experienceInfo: [WorkExperience(workedAs: "Content Writer",
-                                                               description: """
-                                                               As a Content Writer at Winsple, I had the opportunity to play a pivotal role in enhancing the digital presence and marketing strategies of the company. My role revolved around creating high-quality, SEO-optimized content that effectively communicated the diverse range of services offered by the company.
-                                                               
-                                                               I was responsible for producing engaging and informative content that not only captured the essence of our services but also resonated with our target audience. By conducting in-depth keyword research and staying updated with the latest SEO trends, I ensured that our content was well-positioned on search engine results pages, increasing our online visibility and driving organic traffic to the website.
-                                                               
-                                                               My experience involved crafting a wide array of content types, including blog posts, web pages, product descriptions, and more. I worked closely with the marketing and SEO teams to align our content strategies with the company's overarching goals. Additionally, I regularly reviewed and updated existing content to ensure its relevance and accuracy.
-                                                               
-                                                               My time as a Content Writer at [Company Name] allowed me to contribute to the company's growth by creating content that not only educated our audience about our services but also established us as a thought leader in our industry. I am proud to have been part of a team that prioritized content excellence to drive success in the digital landscape.
-                                                               """)])
+            .frame(minHeight: 0, maxHeight: .infinity)
         }
-        .frame(minHeight: 0, maxHeight: .infinity) 
+        .foregroundStyle(.black)
+        
     }
 }
 

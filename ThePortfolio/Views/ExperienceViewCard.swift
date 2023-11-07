@@ -14,46 +14,60 @@ struct ExperienceViewCard: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(.cyan)
-            
-            VStack(alignment: .leading) {
-                HStack {
-                    
-                    Text("Winsple")
-                        .foregroundStyle(.white)
-                        .font(.title)
-                        .bold()
-                    Spacer()
-                    Image(systemName: "globe")
+                .foregroundStyle(Color(hue: 0.089, saturation: 0.049, brightness: 0.926))
+                .opacity(0.5)
+            LazyVGrid(columns: [GridItem()], content: {
+                ForEach(experienceInfo) { item in
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.companyName)
+                                    .font(.title2)
+                                    .bold()
+                                Text(item.workedAs)
+                                    .font(.headline)
+                                    .bold()
+                                Spacer()
+                                HStack {
+                                    Text(item.startDate)
+                                    Text("-")
+                                    Text(item.endDate)
+                                }
+                                .font(.custom("times", size: 12))
+                                
+                            }
+                            
+                            Spacer()
+                            Image(item.companyLogo)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 80, height: 80)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                        
+                        Spacer()
+                        
+                        Text(item.summary)
+                            .font(.callout)
+                    }
+                    .monospaced()
+                    .padding()
                 }
                 
-                Spacer()
-                
-                LazyVGrid(columns: [GridItem()], content: {
-                    ForEach(experienceInfo) { item in
-                        HStack {
-                            Text(item.workedAs)
-                            Text("|")
-                        }
-                    }
-                })
-                
-                Spacer()
-            }
-            .padding(.horizontal)
+            })
+            .multilineTextAlignment(.leading)
+            
+            
         }
         .frame(minHeight: 0, maxHeight: .infinity)
     }
 }
 
 #Preview {
-    ExperienceViewCard(experienceInfo: [WorkExperience(workedAs: "Content Writer",
-                                                       description: """
-                                                      
-                                                      As a Content Writer at Winsple, I had the opportunity to play a pivotal role in enhancing the digital presence and marketing strategies of the company. My role revolved around creating high-quality, SEO-optimized content that effectively communicated the diverse range of services offered by the company.
-                                                      I was responsible for producing engaging and informative content that not only captured the essence of our services but also resonated with our target audience. By conducting in-depth keyword research and staying updated with the latest SEO trends, I ensured that our content was well-positioned on search engine results pages, increasing our online visibility and driving organic traffic to the website.
-                                                      My experience involved crafting a wide array of content types, including blog posts, web pages, product descriptions, and more. I worked closely with the marketing and SEO teams to align our content strategies with the company's overarching goals. Additionally, I regularly reviewed and updated existing content to ensure its relevance and accuracy.
-                                                      My time as a Content Writer at [Company Name] allowed me to contribute to the company's growth by creating content that not only educated our audience about our services but also established us as a thought leader in our industry. I am proud to have been part of a team that prioritized content excellence to drive success in the digital landscape.
-                                                      
-""")])
+    ExperienceViewCard(experienceInfo: [ WorkExperience(companyName: "TechWhoop", workedAs: "Content Head",
+                                                        description: """
+                                                        At Techwhoop I started as a content editor Intern and after one month I was provided with an opportunity to work as a Content Head. As Content head I was responsible for content research and analyse the topics to publish on the website. I worked on wordpress for scheduling and publishing the content on the website.
+                                                        As a Content Head I was also responsible to lead a team of 5 member and maintain the record of content submission and work together with the manager to make sure the content is good to go on the website. By working at TechWhoop I gained experience in WordPress Plugin, i.e. how to maintain the content of the website, how to edit the posts, how to add images to the content and how to check the SEO to maintain the content to pop up on the top of the search.
+                                                        Working as a content head I learnt how to manage deadlines, how to find the content keywords, and how to lead a team to maintain the workflow. I worked with dedication and had an amazing experience working at TechWhoop
+                                                        """, summary: "I started as a content editor intern at TechWhoop, quickly becoming Content Head. Managed team, published content, and learned WordPress and SEO. ", startDate: "November 01, 2022", endDate: " May 01, 2023", companyLogo: "techwhoop")])
 }

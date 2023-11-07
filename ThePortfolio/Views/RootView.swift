@@ -21,20 +21,31 @@ struct ParabolaShape: Shape {
 struct RootView: View {
     
     @State private var isTapped: Bool = false
+    @State var experienceInfo: [WorkExperience] = []
     
+    var dataServices = DataServices()
     var body: some View {
-        
-        ZStack {
-            BackgroundView()
+        NavigationStack {
+            ZStack {
+                BackgroundView()
                 VStack(spacing: 10) {
                     TitleBarView()
-                    MiddleView()
+                    ScrollView{
+                        AllSkillsView()
+                        ExperienceView()
+                        
+                    }
+                    .frame(minHeight:0, maxHeight: .infinity)
+                    .scrollIndicators(.hidden)
                     
                     
                 }
                 .frame(minHeight:0, maxHeight: .infinity)
+                
+            }
+            .monospaced()
+            .padding(.horizontal, 12)
         }
-        .padding(.horizontal, 12)
     }
     
 }
