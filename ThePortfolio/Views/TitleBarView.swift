@@ -30,13 +30,14 @@ struct TitleBarView: View {
         RoundedRectangle(cornerRadius: 12)
             .foregroundStyle(.clear)
             .opacity(0.6)
-            .frame(height: 250)
+            .frame(height: isTapped ? 270 : 170)
+            .transition(.offset(y: 25).combined(with: .opacity).animation(.bouncy(duration: 1)))
         
             .overlay {
                 VStack(spacing: 20) {
                     
                     Circle()
-                        .frame(width: 150, height: 150)
+                        .frame(width: isTapped ? 150 : 170, height: isTapped ? 150 : 170)
                         .foregroundStyle(.blue)
                         .opacity(0.6)
                         .shadow(color: .gray.opacity(0.5), radius: 10, x: -4, y: -3)
@@ -45,8 +46,8 @@ struct TitleBarView: View {
                             Image("Sunil")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 150, height: 240)
-                                .position(x: 75, y: 100)
+                                .frame(width: isTapped ? 150 : 170, height: isTapped ? 240 : 240)
+                                .position(x: isTapped ? 75 : 85, y: isTapped ? 100 : 108)
                                 .clipShape(Circle())
                                 .onTapGesture {
                                     withAnimation(.easeInOut(duration: 1)) {
@@ -60,14 +61,19 @@ struct TitleBarView: View {
                     
                     
                     if isTapped {
+                        
+                        
                         TheProfileView()
-                            .transition(.offset(y: 15).combined(with: .opacity).animation(.easeInOut(duration: 1)))
-                            .animation(.bouncy, value: 2)
+                            .transition(.asymmetric(insertion: .offset(y: -15).combined(with: .opacity).animation(.easeInOut(duration: 1.5)), removal: .opacity.animation(.easeInOut(duration: 0.5))) )
+                            .animation(.easeInOut, value: 2)
+                            .layoutPriority(1)
+                        
                     }
-                   
+                    
                     
                 }
             }
+            .padding(.vertical)
         
         
     }

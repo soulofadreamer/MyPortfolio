@@ -16,6 +16,6 @@ struct WorkExperience: Identifiable, Decodable {
     var startDate: String
     var endDate: String
     var companyLogo: String
-    
+    var darkLogo: String
     
 }

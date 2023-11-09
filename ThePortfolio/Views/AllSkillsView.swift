@@ -17,7 +17,7 @@ struct AllSkillsView: View {
             Text("Skills")
                 .font(.title2)
                 .bold()
-                
+            
             Spacer()
         }
         ScrollView(.horizontal) {

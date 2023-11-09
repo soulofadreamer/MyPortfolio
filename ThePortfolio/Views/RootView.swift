@@ -30,6 +30,7 @@ struct RootView: View {
                 BackgroundView()
                 VStack(spacing: 10) {
                     TitleBarView()
+                    
                     ScrollView{
                         AllSkillsView()
                         ExperienceView()

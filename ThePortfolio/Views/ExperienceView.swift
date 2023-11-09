@@ -21,6 +21,7 @@ struct ExperienceView: View {
                     Text("Work Experience")
                         .font(.title2)
                         .bold()
+                    
                     Spacer()
                 }
                 
@@ -28,9 +29,9 @@ struct ExperienceView: View {
                     
                     ForEach(experienceInfo) { item in
                         
-                        NavigationLink (destination: DetailedExperienceView(), label: {
+                        NavigationLink (destination: DetailedExperienceView(experienceinfo: item), label: {
                             
-                            ExperienceViewCard(experienceInfo: [WorkExperience(companyName: item.companyName, workedAs: item.workedAs, description: item.description, summary: item.summary, startDate: item.startDate, endDate: item.endDate, companyLogo: item.companyLogo)])
+                            ExperienceViewCard(experienceInfo: [WorkExperience(companyName: item.companyName, workedAs: item.workedAs, description: item.description, summary: item.summary, startDate: item.startDate, endDate: item.endDate, companyLogo: item.companyLogo, darkLogo: item.darkLogo)])
                             
                         })
                         
@@ -44,7 +45,9 @@ struct ExperienceView: View {
             }
             .frame(minHeight: 0, maxHeight: .infinity)
         }
-        .foregroundStyle(.black)
+        .navigationBarBackButtonHidden(true)
+        .foregroundStyle(.foreground)
+        
         
     }
 }
