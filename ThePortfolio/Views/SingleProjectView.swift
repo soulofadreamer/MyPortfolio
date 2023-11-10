@@ -28,7 +28,7 @@ struct SingleProjectView: View {
             
             
         }
-        .padding(.horizontal)
+        
     }
 }
 

@@ -20,7 +20,7 @@ struct MyProjectsView: View {
                 Spacer()
             }
             ScrollView(.horizontal) {
-                LazyHGrid(rows: [GridItem()], spacing: 20,content: {
+                LazyHGrid(rows: [GridItem()], spacing: 20, content: {
                     ForEach(myProjects) { projects in
                         
                         SingleProjectView(myProjects: projects)
