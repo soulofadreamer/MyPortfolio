@@ -22,6 +22,9 @@
 		6581889F2AF6BFDD001C83B4 /* ExperienceViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6581889E2AF6BFDD001C83B4 /* ExperienceViewCard.swift */; };
 		658188A12AF6C07D001C83B4 /* AllSkillsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 658188A02AF6C07D001C83B4 /* AllSkillsData.json */; };
 		658A60BE2AF28604001BD495 /* ExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A60BD2AF28604001BD495 /* ExperienceView.swift */; };
+		65A29CA22AFEBA67004CF90D /* MyProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A29CA12AFEBA67004CF90D /* MyProjectsView.swift */; };
+		65A29CA42AFEBB62004CF90D /* SingleProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A29CA32AFEBB62004CF90D /* SingleProjectView.swift */; };
+		65A29CA62AFEBEA2004CF90D /* MyProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A29CA52AFEBEA2004CF90D /* MyProjects.swift */; };
 		65A567D82AEC2F5100CD89DA /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A567D72AEC2F5100CD89DA /* TitleBarView.swift */; };
 		65CAE4BB2AF6CC2E00D05424 /* AllSkillsData.json in Sources */ = {isa = PBXBuildFile; fileRef = 658188A02AF6C07D001C83B4 /* AllSkillsData.json */; };
 		65CEC9AC2AFABFF500083296 /* DetailedExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CEC9AB2AFABFF500083296 /* DetailedExperienceView.swift */; };
@@ -46,6 +49,9 @@
 		6581889E2AF6BFDD001C83B4 /* ExperienceViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewCard.swift; sourceTree = "<group>"; };
 		658188A02AF6C07D001C83B4 /* AllSkillsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllSkillsData.json; sourceTree = "<group>"; };
 		658A60BD2AF28604001BD495 /* ExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceView.swift; sourceTree = "<group>"; };
+		65A29CA12AFEBA67004CF90D /* MyProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsView.swift; sourceTree = "<group>"; };
+		65A29CA32AFEBB62004CF90D /* SingleProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProjectView.swift; sourceTree = "<group>"; };
+		65A29CA52AFEBEA2004CF90D /* MyProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjects.swift; sourceTree = "<group>"; };
 		65A567D72AEC2F5100CD89DA /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
 		65CEC9AB2AFABFF500083296 /* DetailedExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedExperienceView.swift; sourceTree = "<group>"; };
 		65CEC9AD2AFACD7500083296 /* Experience.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Experience.json; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				652274CB2AED87C800BD9D34 /* AllSkills.swift */,
+				65A29CA52AFEBEA2004CF90D /* MyProjects.swift */,
 				655E75B92AEE58C300AF71B9 /* UserInformation.swift */,
 				656EF8262AF95DC40024818A /* WorkExperience.swift */,
 			);
@@ -125,6 +132,8 @@
 			children = (
 				655901062AEAE57B000D3833 /* RootView.swift */,
 				658A60BD2AF28604001BD495 /* ExperienceView.swift */,
+				65A29CA12AFEBA67004CF90D /* MyProjectsView.swift */,
+				65A29CA32AFEBB62004CF90D /* SingleProjectView.swift */,
 				65CEC9AB2AFABFF500083296 /* DetailedExperienceView.swift */,
 				6581889E2AF6BFDD001C83B4 /* ExperienceViewCard.swift */,
 				65A567D72AEC2F5100CD89DA /* TitleBarView.swift */,
@@ -211,15 +220,18 @@
 			files = (
 				65CAE4BB2AF6CC2E00D05424 /* AllSkillsData.json in Sources */,
 				6573CAC22AF172E4000F700C /* BackgroundView.swift in Sources */,
+				65A29CA22AFEBA67004CF90D /* MyProjectsView.swift in Sources */,
 				652274CA2AED865500BD9D34 /* SkillSetView.swift in Sources */,
 				652274CE2AED891500BD9D34 /* DataServices.swift in Sources */,
 				655901072AEAE57B000D3833 /* RootView.swift in Sources */,
 				6581889F2AF6BFDD001C83B4 /* ExperienceViewCard.swift in Sources */,
 				65D19CD82AEED5C4004C6268 /* TheProfileView.swift in Sources */,
+				65A29CA42AFEBB62004CF90D /* SingleProjectView.swift in Sources */,
 				655E75BA2AEE58C300AF71B9 /* UserInformation.swift in Sources */,
 				658A60BE2AF28604001BD495 /* ExperienceView.swift in Sources */,
 				656EF8272AF95DC40024818A /* WorkExperience.swift in Sources */,
 				655E75B62AEE4B0200AF71B9 /* AllSkillsView.swift in Sources */,
+				65A29CA62AFEBEA2004CF90D /* MyProjects.swift in Sources */,
 				651794A42AF1A98B008EDB31 /* ExpandedSkillView.swift in Sources */,
 				652274CC2AED87C800BD9D34 /* AllSkills.swift in Sources */,
 				65A567D82AEC2F5100CD89DA /* TitleBarView.swift in Sources */,

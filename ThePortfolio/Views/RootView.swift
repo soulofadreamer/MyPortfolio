@@ -34,6 +34,7 @@ struct RootView: View {
                     ScrollView{
                         AllSkillsView()
                         ExperienceView()
+                        MyProjectsView()
                         
                     }
                     .frame(minHeight:0, maxHeight: .infinity)

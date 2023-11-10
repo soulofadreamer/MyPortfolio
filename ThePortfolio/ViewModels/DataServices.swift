@@ -74,6 +74,13 @@ struct DataServices {
         return [WorkExperience]()
     }
     
-    
+   
+    func getProjects() -> [MyProjects] {
+        
+        return [MyProjects(projectName: "Xylophone", projectIcon: "Icon", projectLinks: "https://github.com/soulofadreamer/Xylophone"),
+                MyProjects(projectName: "Restaurant", projectIcon: "RestaurantIcon", projectLinks: "https://github.com/soulofadreamer/Restaurant"),
+                MyProjects(projectName: "GuideBook", projectIcon: "GuidebookIcon", projectLinks: "https://github.com/soulofadreamer/Restaurant"),
+                MyProjects(projectName: "Xs&Os", projectIcon: "Xs&OsIcon", projectLinks: "https://github.com/soulofadreamer/Xs-Os")]
+    }
 }
 

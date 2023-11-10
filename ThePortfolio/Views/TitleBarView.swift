@@ -14,6 +14,7 @@ struct PressableButtonStyle: ButtonStyle {
         configuration.label
             .foregroundStyle(configuration.isPressed ? .clear : .gray)
             .opacity(configuration.isPressed ? 1.0 : 1.0)
+            .scaleEffect(x: configuration.isPressed ? 0.95 : 1, y: configuration.isPressed ? 0.95 : 1)
         
     }
 }

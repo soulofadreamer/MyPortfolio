@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct MyProjectsView: View {
+    @State var myProjects: [MyProjects] = []
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            
+            HStack {
+                Text("My Projects")
+                    .font(.title2)
+                    .bold()
+                Spacer()
+            }
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: [GridItem()], spacing: 20,content: {
+                    ForEach(myProjects) { projects in
+                        
+                        SingleProjectView(myProjects: projects)
+                        
+                    }
+                })
+                
+                .onAppear(perform: {
+                    myProjects = DataServices().getProjects()
+                })
+            }
+            .frame(minHeight: 0, maxHeight: .infinity)
+        }
+        
     }
 }
 

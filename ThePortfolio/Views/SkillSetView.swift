@@ -47,18 +47,16 @@ struct SkillSetView: View {
                         HStack{
                             Text(allSkills.skill)
                                 .font(.subheadline)
-                                .foregroundStyle(.black)
                                 .bold()
                             Spacer()
                         }
                         Text(allSkills.description)
                             .font(.subheadline)
-                            .foregroundStyle(.black)
                             .layoutPriority(1)
                             
                     }
                     .multilineTextAlignment(.leading)
-                    
+                    .foregroundStyle(.foreground)
                 }
                 .frame(width: 250)
             })

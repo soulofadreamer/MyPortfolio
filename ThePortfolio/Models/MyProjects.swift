@@ -6,3 +6,9 @@
 //
 
 import Foundation
+struct MyProjects: Identifiable, Decodable {
+    let id = UUID()
+    var projectName: String
+    var projectIcon: String
+    var projectLinks: String
+}
